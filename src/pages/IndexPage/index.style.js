@@ -1,6 +1,9 @@
 export default `
 
 .host {
+  position: absolute;
+  top: 0;
+  left: 0;
   background: #1c1618;
   height: 100%;
   width: 100%;
@@ -11,11 +14,12 @@ export default `
 .logo {
   height: 100px;
   width: 100%;
-  padding-top: 30px;
+  padding-top: 130px;
 }
 
 .glitch {
   position: absolute;
+  left: -45px;
   width: 100%;
   z-index: 10;
 }
@@ -30,6 +34,12 @@ export default `
 .main-title span {
   display: inline-block;
   transform: rotate(-180deg);
+  transition: transform 0.5s;
+}
+
+.main-title:hover span {
+  transform: rotate(0deg);
+  transition: transform 0.5s;
 }
 
 .nav {

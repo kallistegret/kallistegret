@@ -4,6 +4,7 @@ export default `
   height: 100px;
   width: 100%;
   left: 0;
+  z-index: 5;
   background: black;
 }
 
@@ -16,7 +17,6 @@ export default `
 }
 
 .content {
-  height: calc(100vh - 200px);
-  margin-top: 100px;
+  height: calc(100vh - 100px);
 }
 `

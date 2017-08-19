@@ -1,6 +1,13 @@
 export default `
 
-
+.host {
+  position: fixed;
+  top: 0;
+  left: -45px;
+  height: 100vh;
+  background: #1c1618;
+  z-index: 10;
+}
 
 #glitch {
   position: absolute;
@@ -21,6 +28,7 @@ export default `
   width: 120px;
   top: calc(50vh - 60px);
   left: calc(50vw - 60px);
+  margin-left: 45px;
   background-image: url('/assets/Icons/play.svg');
   background-position: center;
   background-size: cover;
@@ -32,6 +40,8 @@ export default `
   position: absolute;
   font-size: 15px;
   top: calc(50vh + 80px);
+  margin-left: 45px;
+
   text-align: center;
   width: 100%;
   color: white;

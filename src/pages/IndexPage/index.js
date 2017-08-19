@@ -10,7 +10,7 @@ export default class Index extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      glitchDisplayed: false
+      glitchDisplayed: true
     }
 
     this.dismissGlitch = this.dismissGlitch.bind(this)
@@ -20,6 +20,8 @@ export default class Index extends React.Component {
     this.setState({
       glitchDisplayed: false
     })
+    this.refs.logo.appearAnimation()
+
   }
   render() {
 
@@ -36,7 +38,7 @@ export default class Index extends React.Component {
           <div className='host'>
 
           <div className="logo">
-            <Logo />
+            <Logo ref='logo'/>
           </div>
 
         <h1 className="main-title">
