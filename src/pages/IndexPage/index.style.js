@@ -11,10 +11,16 @@ export default `
   z-index: 0;
 }
 
+.centered-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  left: 50%;
+}
+
 .logo {
-  height: 100px;
-  width: 100%;
-  padding-top: 130px;
+  position: relative;
+  height: 120px;
 }
 
 .glitch {
@@ -46,4 +52,12 @@ export default `
   width: 305px;
   margin-left: calc(50% - 152.5px);
 }
+
+@media screen and (max-width: 640px) {
+  .main-title {
+    font-size: 40px;
+  }
+}
+
+
 `

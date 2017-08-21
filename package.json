@@ -85,7 +85,8 @@
   "babel": {
     "presets": [
       "react-app"
-    ]
+    ],
+    "plugins": ["styled-jsx"]
   },
   "eslintConfig": {
     "extends": "react-app"

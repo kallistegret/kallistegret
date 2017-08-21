@@ -1,7 +1,7 @@
 export default `
 .bar {
   position: absolute;
-  height: 100px;
+  height: 10%;
   width: 100%;
   left: 0;
   z-index: 5;

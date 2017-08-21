@@ -10,10 +10,20 @@ class Glitch extends Component {
   constructor(props) {
     super(props)
     this.dismiss = this.dismiss.bind(this)
+
+    this.state = {
+      pressToPlayRendered: false
+    }
   }
 
   componentDidMount() {
     this.addAnimation(this.animateGlitch.bind(this))
+
+    setTimeout(() => {
+      this.setState({
+        pressToPlayRendered: true
+      })
+    }, 3000)
   }
 
 
@@ -37,16 +47,15 @@ class Glitch extends Component {
         .to(glitch, 0.1, {x: 45})
         .to(glitch, 0.1, {x: 0})
         .to(glitch, 2.5, {})
+    return this.glitchAnimation
   }
 
   removeGlitchAnimation(onComplete) {
 
     this.glitchAnimation.stop()
-    var glitch = document.getElementById("glitch")
-    var playButton = document.getElementById("play")
-    var pressToPlay = document.getElementById("pressToPlay")
+    var glitch = document.getElementById("host")
 
-    TweenMax.to([glitch, playButton, pressToPlay], 1, {y: -window.innerHeight, onComplete: onComplete})
+    TweenMax.to([glitch], 1, {y: -window.innerHeight, onComplete: onComplete})
   }
 
 
@@ -64,16 +73,17 @@ class Glitch extends Component {
 
   render() {
     return (
-      <div className="host" style={{
-        maxWidth: '100vw',
-        maxHeight: '100vh'
+      <div id="host" className="host" style={{
+        width: '100vw',
+        height: '100vh',
+        backgroundColor: 'black'
       }}>
 
         <div id="glitch" />
 
         <div id='play' className='playButton' onClick={this.dismiss}/>
 
-        {this.renderPressToPlay()}
+        {this.state.pressToPlayRendered ? this.renderPressToPlay() : null}
 
           <style jsx> {styles} </style>
 

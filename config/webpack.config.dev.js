@@ -127,7 +127,7 @@ module.exports = {
         include: paths.appSrc,
         loader: 'babel',
         options: {
-          plugins: ['transform-decorators-legacy'],
+          plugins: ['styled-jsx', 'transform-decorators-legacy'],
           cacheDirectory: true
         }
       },
