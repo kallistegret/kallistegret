@@ -1,4 +1,11 @@
 export default `
+
+.host {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
 .bar {
   position: absolute;
   height: 10%;
@@ -17,6 +24,8 @@ export default `
 }
 
 .content {
-  height: calc(100vh - 100px);
+  position: relative;
+  margin-top: 10vh;
+  height: 80vh;
 }
 `

@@ -7,7 +7,7 @@ export default class Nav extends React.Component {
       <ul>
         <li> <a href='#'> RÉSUMÉ </a> </li>
         <li> <a href='#'> PORTFOLIO </a> </li>
-        <li> <a href='#'> ABOUT ME </a> </li>
+        <li> <a href='/AboutMe'> ABOUT ME </a> </li>
         <style jsx>{styles}</style>
       </ul>
     )
